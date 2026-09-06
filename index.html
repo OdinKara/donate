@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Support GrimnirWorks</title>
+<meta name="description" content="Tip jar for GrimnirWorks. All the software is free; nothing here is paywalled." />
+<meta name="color-scheme" content="dark" />
+<style>
+  :root {
+    --bg: #16181d;
+    --surface: #1f2229;
+    --border: #2f333c;
+    --text: #e8e6df;
+    --text-2: #a9adb8;
+    --muted: #6f7480;
+    --amber: #f0a626;
+    --green: #3fb950;
+    --radius: 12px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 40px 18px 64px;
+    background: var(--bg);
+    color: var(--text);
+    font: 15px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 640px; margin: 0 auto; }
+
+  header { text-align: center; margin-bottom: 34px; }
+  .wordmark {
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin: 0 0 14px;
+  }
+  h1 { font-size: 26px; font-weight: 500; margin: 0 0 12px; }
+  .lede { color: var(--text-2); margin: 0 auto; max-width: 30em; }
+  .lede strong { color: var(--text); font-weight: 500; }
+
+  .rail {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px;
+    margin-bottom: 14px;
+  }
+  .rail h2 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 0 2px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .rail h2 .n {
+    font-size: 11px;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .rail h2 .sub { color: var(--muted); font-weight: 400; }
+  .rail p.hint { color: var(--muted); font-size: 13px; margin: 0 0 14px; }
+
+  .addr-row { display: flex; gap: 14px; align-items: flex-start; flex-wrap: wrap; }
+  .addr-col { flex: 1 1 240px; min-width: 0; }
+
+  .addr {
+    display: block;
+    width: 100%;
+    font-family: ui-monospace, SFMono-Regular, "Cascadia Mono", Consolas, "Liberation Mono", monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text);
+    background: #16181d;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 11px;
+    word-break: break-all;
+    user-select: all;
+    -webkit-user-select: all;
+  }
+
+  button.copy {
+    margin-top: 9px;
+    font: inherit;
+    font-size: 13px;
+    color: var(--text);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 7px 13px;
+    cursor: pointer;
+  }
+  button.copy:hover { border-color: var(--amber); color: var(--amber); }
+  button.copy[data-state="ok"] { border-color: var(--green); color: var(--green); }
+  button.copy[data-state="fail"] { border-color: var(--border); color: var(--muted); }
+
+  .qr {
+    flex: 0 0 auto;
+    width: 124px;
+    height: 124px;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 7px;
+  }
+  .qr img { display: block; width: 100%; height: 100%; }
+
+  a.rail-link {
+    display: inline-block;
+    font-size: 14px;
+    color: var(--amber);
+    text-decoration: none;
+    border-bottom: 1px solid color-mix(in srgb, var(--amber) 40%, transparent);
+  }
+  a.rail-link:hover { border-bottom-color: var(--amber); }
+
+  .note { color: var(--muted); font-size: 12.5px; margin: 10px 0 0; }
+  .note strong { color: var(--text-2); font-weight: 500; }
+
+  footer {
+    margin-top: 30px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12.5px;
+  }
+  footer p { margin: 6px 0; }
+  footer a { color: var(--text-2); }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <p class="wordmark">GrimnirWorks</p>
+    <h1>Support the work</h1>
+    <p class="lede">
+      This is a <strong>tip jar</strong>, not a paywall. Every GrimnirWorks app is
+      free and open source, and it stays that way whether or not anyone ever opens
+      this page. There is no paid tier, no license key, and no feature held back.
+      If something here saved you an afternoon and you feel like buying a coffee,
+      the rails below are how.
+    </p>
+  </header>
+
+  <!-- 1. Bitcoin ---------------------------------------------------------- -->
+  <section class="rail">
+    <h2><span class="n">01</span> Bitcoin <span class="sub">(on-chain)</span></h2>
+    <p class="hint">Native SegWit (bech32), mainnet only &mdash; please don&rsquo;t send other chains or tokens to it.</p>
+    <div class="addr-row">
+      <div class="addr-col">
+        <code class="addr" id="addr-btc">bc1q9c2jx7ve0s2g7pg4fp3wkg7sqyk0zueyqj9jp5</code>
+        <button class="copy" type="button" data-copy="addr-btc">Copy address</button>
+      </div>
+      <div class="qr">
+        <img src="qr/bitcoin.svg" alt="QR code encoding the Bitcoin address shown beside it" width="124" height="124" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Lightning -------------------------------------------------------- -->
+  <section class="rail">
+    <h2><span class="n">02</span> Lightning</h2>
+    <p class="hint">A Lightning address &mdash; paste it into any modern wallet, or scan the code.</p>
+    <div class="addr-row">
+      <div class="addr-col">
+        <code class="addr" id="addr-ln">wwbd@strike.me</code>
+        <button class="copy" type="button" data-copy="addr-ln">Copy address</button>
+      </div>
+      <div class="qr">
+        <img src="qr/lightning.svg" alt="QR code encoding the Lightning address shown beside it" width="124" height="124" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. X Money ---------------------------------------------------------- -->
+  <section class="rail">
+    <h2><span class="n">03</span> X Money</h2>
+    <p class="hint">Send through X, if that is where you already are.</p>
+    <a class="rail-link" href="https://x.com/WWBD01_Freedom" rel="noopener noreferrer" target="_blank">@WWBD01_Freedom on X &rarr;</a>
+  </section>
+
+  <!-- 4. GitHub Sponsors -------------------------------------------------- -->
+  <section class="rail">
+    <h2><span class="n">04</span> GitHub Sponsors</h2>
+    <p class="hint">Recurring, through GitHub&rsquo;s own billing.</p>
+    <a class="rail-link" href="https://github.com/sponsors/OdinKara" rel="noopener noreferrer" target="_blank">github.com/sponsors/OdinKara &rarr;</a>
+    <p class="note">
+      Heads up: this one is <strong>pending approval</strong> and may still return a
+      404. If it does, nothing is wrong on your end &mdash; use one of the other rails.
+    </p>
+  </section>
+
+  <footer>
+    <p>
+      These addresses live in git at
+      <a href="https://github.com/OdinKara/donate" rel="noopener noreferrer" target="_blank">OdinKara/donate</a>,
+      so any change to one is public and dated.
+    </p>
+    <p>GrimnirWorks &middot; <a href="https://grimnirworks.com" rel="noopener noreferrer" target="_blank">grimnirworks.com</a></p>
+  </footer>
+
+</main>
+
+<script>
+/* Copy buttons. Vanilla, inline, no libraries and no network - this page has to
+   be safe to read as a single file. The async Clipboard API is unavailable on
+   plain-HTTP origins and in some in-app browsers, so there is an execCommand
+   fallback; if BOTH fail the button says so instead of lying, and the address
+   stays selectable (user-select: all) for a manual copy. */
+(function () {
+  function legacyCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed';
+    ta.style.top = '-1000px';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    ta.setSelectionRange(0, text.length);
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    return ok;
+  }
+
+  function flash(btn, ok) {
+    var original = btn.getAttribute('data-label') || btn.textContent;
+    btn.setAttribute('data-label', original);
+    btn.setAttribute('data-state', ok ? 'ok' : 'fail');
+    btn.textContent = ok ? 'Copied' : 'Select it and press Ctrl+C';
+    window.setTimeout(function () {
+      btn.textContent = btn.getAttribute('data-label');
+      btn.removeAttribute('data-state');
+    }, 2200);
+  }
+
+  var buttons = document.querySelectorAll('button.copy');
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function () {
+      var btn = this;
+      var text = document.getElementById(btn.getAttribute('data-copy')).textContent.trim();
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(
+          function () { flash(btn, true); },
+          function () { flash(btn, legacyCopy(text)); }
+        );
+      } else {
+        flash(btn, legacyCopy(text));
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>

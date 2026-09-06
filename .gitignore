@@ -1,0 +1,39 @@
+# ── Locked FIRST, before any source entered this repo. ──────────────────────
+# This repo publishes payment addresses. Nothing secret should ever be near it,
+# and nothing generated should ever be committed except the QR images.
+
+# Secrets / environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.jks
+*.keystore
+key.properties
+keystore.properties
+credentials.json
+secrets.*
+
+# Tooling / scratch
+tools/.venv/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+node_modules/
+.cache/
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*~
+
+# Internal handoff doc. This repo is PUBLIC — DEV.md carries studio notes,
+# roadmap and local paths that must never be published. Ignored, never committed.
+DEV.md
