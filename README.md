@@ -72,7 +72,6 @@ the same bytes, which is what makes a by-eye audit meaningful.
 | 1 | Bitcoin (on-chain) | native SegWit / bech32, mainnet only |
 | 2 | Lightning | `wwbd@strike.me` |
 | 3 | X Money | [@WWBD01_Freedom](https://x.com/WWBD01_Freedom) |
-| 4 | GitHub Sponsors | [OdinKara](https://github.com/sponsors/OdinKara) — pending approval, may 404 |
 
 Nothing in any GrimnirWorks project is paywalled, and nothing about this page
 changes that. It is a tip jar.
