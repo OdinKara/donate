@@ -78,5 +78,5 @@ changes that. It is a tip jar.
 
 ## License
 
-The page content is © GrimnirWorks / GrimnirWorks. Do not reuse it with these
+The page content is © GrimnirWorks. Do not reuse it with these
 addresses substituted.
